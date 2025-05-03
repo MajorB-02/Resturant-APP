@@ -11,14 +11,7 @@ const nextConfig = {
   swcMinify: true,
 
   experimental: {
-    serverActions: {
-      allowedOrigins: [
-        'http://localhost:3000',
-        'http://localhost:3001',
-        'http://localhost:3002',
-        'http://localhost:3003',
-      ],
-    },
+    serverActions: true
   },
 
   turbopack: {
@@ -30,7 +23,7 @@ const nextConfig = {
   webpack: (config) => {
     config.resolve.fallback = {
       fs: false,
-      path: false,
+      path: false
     };
     return config;
   },
@@ -45,4 +38,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig; 
+module.exports = withPWA(nextConfig); 
