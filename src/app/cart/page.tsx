@@ -3,7 +3,6 @@
 import { useCart } from '@/context/CartContext';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 
 export default function CartPage() {
   const { state, dispatch } = useCart();

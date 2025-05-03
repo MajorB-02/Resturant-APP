@@ -47,9 +47,9 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold mb-6">Our Philosophy</h2>
-            <p className="text-gray-600 text-lg mb-4">
+            <p className="text-gray-600 mb-6">
               Founded in 2010, our restaurant has been serving exceptional cuisine in a warm and inviting atmosphere. 
-              We believe in using only the finest ingredients, sourced locally whenever possible, to create memorable dining experiences.
+              We&apos;re committed to using the finest ingredients, sourced locally whenever possible, to create memorable dining experiences.
             </p>
             <p className="text-gray-600 text-lg">
               Our commitment to quality and innovation has earned us recognition as one of the city's premier dining destinations.

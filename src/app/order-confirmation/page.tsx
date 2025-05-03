@@ -41,8 +41,8 @@ export default function OrderConfirmationPage() {
             Order Confirmed!
           </h1>
           
-          <p className="text-gray-600 mb-8">
-            Thank you for your order. We'll start preparing your delicious meal right away!
+          <p className="text-gray-600 mb-6">
+            Your order has been received and is being prepared. You&apos;ll be redirected to the home page shortly.
           </p>
 
           <p className="text-sm text-gray-500 mb-8">

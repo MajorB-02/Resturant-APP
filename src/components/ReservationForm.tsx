@@ -58,8 +58,8 @@ export default function ReservationForm() {
       setTimeout(() => {
         router.push('/');
       }, 2000);
-    } catch (err) {
-      setError('Failed to make reservation. Please try again.');
+    } catch {
+      setError('Failed to submit reservation. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
