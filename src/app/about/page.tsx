@@ -17,7 +17,7 @@ const teamMembers = [
     name: "Michael Brown",
     role: "Pastry Chef",
     image: "/team/chef3.jpg",
-    bio: "Michael's desserts are the perfect ending to any meal, combining traditional techniques with modern flair."
+    bio: "Michael&apos;s desserts are the perfect ending to any meal, combining traditional techniques with modern flair."
   }
 ];
 
@@ -51,7 +51,7 @@ export default function About() {
               Our chefs are passionate about creating memorable dining experiences. We&apos;re committed to using the finest ingredients and traditional cooking methods.
             </p>
             <p className="text-gray-600 text-lg">
-              Our commitment to quality and innovation has earned us recognition as one of the city's premier dining destinations.
+              Our commitment to quality and innovation has earned us recognition as one of the city&apos;s premier dining destinations.
             </p>
           </div>
 
