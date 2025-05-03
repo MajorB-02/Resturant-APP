@@ -41,9 +41,7 @@ export default function OrderConfirmationPage() {
             Order Confirmed!
           </h1>
           
-          <p className="text-gray-600 mb-6">
-            Your order has been received and is being prepared. You&apos;ll be redirected to the home page shortly.
-          </p>
+          <p className="text-gray-600 mb-6">We&apos;ve received your order and will begin preparing it right away.</p>
 
           <p className="text-sm text-gray-500 mb-8">
             You will be redirected to the homepage in 5 seconds...
