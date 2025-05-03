@@ -1,23 +1,53 @@
 {
-  "extends": "next/core-web-vitals",
-  "rules": {
-    "react/no-unescaped-entities": "off",
-    "@typescript-eslint/no-unused-vars": "off",
-    "react/display-name": "off",
-    "react/prop-types": "off",
-    "@next/next/no-html-link-for-pages": "off",
-    "@next/next/no-img-element": "off"
-  },
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "prettier"
+  ],
+  "plugins": ["react", "@typescript-eslint", "jsx-a11y", "import"],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
+    "ecmaFeatures": { "jsx": true }
   },
   "settings": {
-    "react": {
-      "version": "detect"
-    }
-  }
+    "react": { "version": "detect" },
+    "import/resolver": { "typescript": {} }
+  },
+  "rules": {
+    // Next.js: enforce using <Link> and <Image>
+    "@next/next/no-html-link-for-pages": "error",
+    "@next/next/no-img-element": "error",
+
+    // Turn off only the truly noisy rules
+    "react/no-unescaped-entities": "off",
+    "react/prop-types": "off",  // TS covers propTypes
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "react/display-name": "off",
+
+    // React hooks
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+
+    // Import sorting (optional)
+    "import/order": [
+      "warn",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+        "newlines-between": "always"
+      }
+    ],
+
+    // a11y tweaks (optional)
+    "jsx-a11y/anchor-is-valid": "warn"
+  },
+  "ignorePatterns": ["node_modules/", ".next/", "out/", "public/"]
 } 

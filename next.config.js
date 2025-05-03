@@ -7,20 +7,34 @@ const withPWA = require('next-pwa')({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+
   experimental: {
     serverActions: {
-      allowedOrigins: ['localhost:3000', 'localhost:3001', 'localhost:3002', 'localhost:3003']
+      allowedOrigins: [
+        'http://localhost:3000',
+        'http://localhost:3001',
+        'http://localhost:3002',
+        'http://localhost:3003',
+      ],
     },
-    turbo: {
-      rules: {
-        '*.tsx': ['@next/next/no-html-link-for-pages']
-      }
-    }
   },
+
+  turbopack: {
+    rules: {
+      '*.tsx': ['@next/next/no-html-link-for-pages'],
+    },
+  },
+
   webpack: (config) => {
-    config.resolve.fallback = { fs: false, path: false };
+    config.resolve.fallback = {
+      fs: false,
+      path: false,
+    };
     return config;
   },
+
   images: {
     remotePatterns: [
       {
