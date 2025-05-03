@@ -24,8 +24,8 @@ export default function CartPage() {
       await new Promise(resolve => setTimeout(resolve, 1500));
       dispatch({ type: 'CLEAR_CART' });
       router.push('/order-confirmation');
-    } catch (error) {
-      console.error('Checkout failed:', error);
+    } catch {
+      console.error('Checkout failed');
     } finally {
       setIsCheckingOut(false);
     }
